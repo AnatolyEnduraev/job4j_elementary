@@ -8,7 +8,6 @@ public class Converter {
      * @return
      */
     public static double rubleToEuro(double value) {
-
         return value / 90;
     }
 
@@ -18,9 +17,7 @@ public class Converter {
      * @return
      */
     public static double rubleToDollar(double value) {
-
         return value / 75;
-
     }
 }
 
