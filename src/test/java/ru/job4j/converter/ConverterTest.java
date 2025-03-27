@@ -23,5 +23,6 @@ class ConverterTest {
         double output = Converter.rubleToDollar(input);
         double value = 0.0001;
         assertThat(output).isEqualTo(expected, withPrecision(value));
+
     }
 }

@@ -20,6 +20,7 @@ public class Converter {
     public static double rubleToDollar(double value) {
 
         return value / 75;
+
     }
 }
 
