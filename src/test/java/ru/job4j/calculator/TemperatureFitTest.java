@@ -21,4 +21,5 @@ class TemperatureFitTest {
         double output = TemperatureFit.idealTemperatureForMeat(input);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
+
 }

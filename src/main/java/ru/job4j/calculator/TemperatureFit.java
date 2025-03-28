@@ -17,6 +17,5 @@ public class TemperatureFit {
         System.out.println("Ideal temperature for fruits is " + fruitsTemp + "°C");
         System.out.println("Ideal temperature for meat is " + meatTemp + "°C");
     }
-
 }
 
