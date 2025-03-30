@@ -29,3 +29,4 @@ class VectorTest {
         assertThat(output).isEqualTo(expected);
     }
 }
+
