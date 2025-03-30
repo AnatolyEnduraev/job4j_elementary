@@ -1,5 +1,8 @@
 package ru.job4j.condition;
 
+/**
+ * Класс для работы с векторами.
+ */
 public class Vector {
 
     /**
@@ -17,12 +20,16 @@ public class Vector {
         return String.format("(%d, %d)", xResult, yResult);
     }
 
+    /**
+     * Точка входа в программу.
+     *
+     * @param args аргументы командной строки.
+     */
     public static void main(String[] args) {
         String result = addVectors(1, 2, 3, 4);
         System.out.println("result (1, 2) + (3, 4) = " + result);
     }
 }
-
 
 
 
