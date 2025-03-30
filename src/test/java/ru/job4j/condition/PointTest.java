@@ -30,3 +30,4 @@ class PointTest {
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 }
+
