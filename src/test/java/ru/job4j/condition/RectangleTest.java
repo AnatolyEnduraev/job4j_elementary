@@ -33,3 +33,4 @@ class RectangleTest {
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 }
+
