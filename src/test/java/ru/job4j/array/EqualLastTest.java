@@ -23,8 +23,8 @@ class EqualLastTest {
 
     @Test
     public void whenZero() {
-        int[] left = {1};
-        int[] right = {3, 2};
+        int[] left = {};
+        int[] right = {};
         boolean result = EqualLast.check(left, right);
         assertThat(result).isFalse();
     }
