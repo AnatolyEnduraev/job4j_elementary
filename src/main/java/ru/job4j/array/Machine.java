@@ -18,3 +18,4 @@ public class Machine {
         return Arrays.copyOf(result, size);
     }
 }
+
