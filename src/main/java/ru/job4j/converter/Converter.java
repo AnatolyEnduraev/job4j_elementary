@@ -1,7 +1,6 @@
 package ru.job4j.converter;
 
 public class Converter {
-
     /**
      *  Assuming the conversion rate is 1 Euro = 90 Rubles
      * @param value
