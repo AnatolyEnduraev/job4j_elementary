@@ -14,3 +14,4 @@ public class Max {
         return max(max(a, b), max(c, d));
     }
 }
+
