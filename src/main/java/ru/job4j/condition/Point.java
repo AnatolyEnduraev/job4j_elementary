@@ -44,3 +44,4 @@ public class Point {
         System.out.println("Point[" + this.x + ", " + this.y + ", " + this.z + "]");
     }
 }
+
