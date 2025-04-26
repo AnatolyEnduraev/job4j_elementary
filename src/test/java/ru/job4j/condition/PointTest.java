@@ -28,5 +28,23 @@ class PointTest {
         double result = a.distance(b);
         assertEquals(5.66, result, 0.01);
     }
+
+    @Test
+    public void whenTwoPointsIn3DThenDistanceIsCorrect() {
+        Point point1 = new Point(1, 2, 3);
+        Point point2 = new Point(4, 6, 8);
+        double result = point1.distance3d(point2);
+        assertEquals(7.07, result, 0.01);
+    }
+
+    @Test
+    public void whenSamePointsThenDistanceIsZero() {
+        Point point1 = new Point(1, 2, 3);
+        Point point2 = new Point(1, 2, 3);
+        double result = point1.distance3d(point2);
+        assertEquals(0.00, result, 0.01);
+    }
 }
+
+
 

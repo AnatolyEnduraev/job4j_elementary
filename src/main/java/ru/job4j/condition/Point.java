@@ -9,6 +9,7 @@ import static java.lang.Math.pow;
 public class Point {
     private int x;
     private int y;
+    private int z;
 
     /**
      * Конструктор для инициализации точки с заданными координатами.
@@ -20,6 +21,12 @@ public class Point {
         this.y = second;
     }
 
+    public Point(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
     /**
      * Метод для вычисления расстояния до другой точки.
      * @param that другая точка
@@ -29,10 +36,11 @@ public class Point {
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
-    public static void main(String[] args) {
-        Point a = new Point(0, 0);
-        Point b = new Point(0, 2);
-        double distance = a.distance(b);
-        System.out.println("Расстояние между точками: " + distance);
+    public double distance3d(Point that) {
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2) + pow(this.z - that.z, 2));
+    }
+
+    public void info() {
+        System.out.println("Point[" + this.x + ", " + this.y + ", " + this.z + "]");
     }
 }
