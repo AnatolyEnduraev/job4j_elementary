@@ -13,11 +13,11 @@ public class Config {
         return search(key);
     }
 
-    private String search(String key) {
-        return key;
-    }
-
     public void print() {
         System.out.println(position);
+    }
+
+    private String search(String key) {
+        return key;
     }
 }
