@@ -11,33 +11,23 @@ public class Matches {
 
         while (count > 0) {
             String player = turn ? "Первый игрок" : "Второй игрок";
-            turn = !turn;
             System.out.println(player + ", введите число от 1 до 3:");
-            int matches = 0;
-            boolean validInput = false;
-
-            while (!validInput) {
-                try {
-                    matches = Integer.parseInt(input.nextLine());
-                    if (matches >= 1 && matches <= 3 && matches <= count) {
-                        validInput = true;
-                    } else {
-                        System.out.println("Ошибка: введите число от 1 до 3 и не больше оставшихся спичек (" + count + ").");
-                    }
-                } catch (NumberFormatException e) {
-                    System.out.println("Ошибка: введите корректное число.");
-                }
+            int matches;
+            try {
+                matches = Integer.parseInt(input.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка: введите корректное число.");
+                continue;
+            }
+            if (matches < 1 || matches > 3 || matches > count) {
+                System.out.println("Ошибка: введите число от 1 до 3 и не больше оставшихся спичек (" + count + ").");
+                continue;
             }
             count -= matches;
             System.out.println("Осталось спичек: " + count);
-            if (count == 0) {
-                break;
-            }
+            turn = !turn;
         }
-        if (!turn) {
-            System.out.println("Выиграл первый игрок!");
-        } else {
-            System.out.println("Выиграл второй игрок!");
-        }
+        System.out.println((!turn ? "Выиграл первый игрок!" : "Выиграл второй игрок!"));
+        input.close();
     }
 }
