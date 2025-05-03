@@ -11,17 +11,16 @@ public class Matches {
 
         while (count > 0) {
             String player = turn ? "Первый игрок" : "Второй игрок";
-            System.out.println(player + ", введите число от 1 до 3:");
-            int matches;
-            try {
+            int matches = 0;
+            boolean valid = false;
+            while (!valid) {
+                System.out.println(player + ", введите число от 1 до 3:");
                 matches = Integer.parseInt(input.nextLine());
-            } catch (NumberFormatException e) {
-                System.out.println("Ошибка: введите корректное число.");
-                continue;
-            }
-            if (matches < 1 || matches > 3 || matches > count) {
-                System.out.println("Ошибка: введите число от 1 до 3 и не больше оставшихся спичек (" + count + ").");
-                continue;
+                if (matches >= 1 && matches <= 3 && matches <= count) {
+                    valid = true;
+                } else {
+                    System.out.println("Ошибка: введите число от 1 до 3 и не больше оставшихся спичек (" + count + ").");
+                }
             }
             count -= matches;
             System.out.println("Осталось спичек: " + count);
