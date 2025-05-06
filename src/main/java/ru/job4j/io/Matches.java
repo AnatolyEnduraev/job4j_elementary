@@ -8,27 +8,19 @@ public class Matches {
         System.out.println("Игра 11.");
         boolean turn = true;
         int count = 11;
-
         while (count > 0) {
             String player = turn ? "Первый игрок" : "Второй игрок";
-            int matches = 0;
-            boolean valid = false;
-            while (!valid) {
-                System.out.println(player + ", введите число от 1 до 3:");
-                matches = Integer.parseInt(input.nextLine());
-                if (matches >= 1 && matches <= 3 && matches <= count) {
-                    valid = true;
-                } else {
-                    System.out.println("Ошибка: введите число от 1 до 3 и не больше оставшихся спичек (" + count + ").");
-                }
+            System.out.println(player + ", введите число от 1 до 3:");
+            int matches = Integer.parseInt(input.nextLine());
+            if (matches >= 1 && matches <= Math.min(3, count)) {
+                count -= matches;
+                System.out.println("Осталось спичек: " + count);
+                turn = !turn;
+            } else {
+                System.out.println("Ошибка: введите число от 1 до 3 и не больше оставшихся спичек (" + count + ").");
             }
-            count -= matches;
-            System.out.println("Осталось спичек: " + count);
-            turn = !turn;
         }
         System.out.println((!turn ? "Выиграл первый игрок!" : "Выиграл второй игрок!"));
         input.close();
     }
 }
-
-
